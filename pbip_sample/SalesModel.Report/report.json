@@ -1,0 +1,66 @@
+{
+  "config": "{\"version\":\"5.70\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY26SU02\",\"type\":2,\"version\":{\"visual\":\"2.6.0\",\"report\":\"3.1.0\",\"page\":\"2.3.0\"}}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"useEnhancedTooltips\":true,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY26SU02",
+            "path": "BaseThemes/CY26SU02.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Page 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.0,
+      "name": "98c9e7fee5c98bd69bef",
+      "visualContainers": [
+        {
+          "x": 20,
+          "y": 20,
+          "z": 0,
+          "width": 250,
+          "height": 150,
+          "config": "{\"name\": \"9aa9b679\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 20, \"y\": 20, \"z\": 0, \"height\": 150, \"width\": 250, \"tabOrder\": 1000}}], \"singleVisual\": {\"visualType\": \"card\", \"drillFilterOtherVisuals\": true, \"projections\": {\"Values\": [{\"queryRef\": \"Sales_Historical.Total Revenue Historical\", \"active\": true}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"s\", \"Entity\": \"Sales_Historical\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"Total Revenue Historical\"}, \"Name\": \"Sales_Historical.Total Revenue Historical\"}]}, \"vcObjects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Total Revenue Historical'\"}}}}}]}}}",
+          "filters": "[]",
+          "query": "{}",
+          "dataTransforms": "{}"
+        },
+        {
+          "x": 300,
+          "y": 20,
+          "z": 0,
+          "width": 250,
+          "height": 150,
+          "config": "{\"name\": \"23a5f3ab\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 300, \"y\": 20, \"z\": 0, \"height\": 150, \"width\": 250, \"tabOrder\": 1000}}], \"singleVisual\": {\"visualType\": \"card\", \"drillFilterOtherVisuals\": true, \"projections\": {\"Values\": [{\"queryRef\": \"Sales_Historical.Total Order Count\", \"active\": true}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"s\", \"Entity\": \"Sales_Historical\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"Total Order Count\"}, \"Name\": \"Sales_Historical.Total Order Count\"}]}, \"vcObjects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Total Order Count'\"}}}}}]}}}",
+          "filters": "[]",
+          "query": "{}",
+          "dataTransforms": "{}"
+        },
+        {
+          "x": 580,
+          "y": 20,
+          "z": 0,
+          "width": 250,
+          "height": 150,
+          "config": "{\"name\": \"69aeb212\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 580, \"y\": 20, \"z\": 0, \"height\": 150, \"width\": 250, \"tabOrder\": 1000}}], \"singleVisual\": {\"visualType\": \"card\", \"drillFilterOtherVisuals\": true, \"projections\": {\"Values\": [{\"queryRef\": \"Product.AverageUnitPriceFromProduct\", \"active\": true}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"s\", \"Entity\": \"Product\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"s\"}}, \"Property\": \"AverageUnitPriceFromProduct\"}, \"Name\": \"Product.AverageUnitPriceFromProduct\"}]}, \"vcObjects\": {\"title\": [{\"properties\": {\"text\": {\"expr\": {\"Literal\": {\"Value\": \"'AverageUnitPriceFromProduct'\"}}}}}]}}}",
+          "filters": "[]",
+          "query": "{}",
+          "dataTransforms": "{}"
+        }
+      ],
+      "width": 1280.0
+    }
+  ]
+}

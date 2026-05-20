@@ -1,0 +1,124 @@
+{
+  "compatibilityLevel": 1600,
+  "model": {
+    "annotations": [
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "1"
+      },
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"Sales\"]"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\"]"
+      }
+    ],
+    "culture": "en-US",
+    "cultures": [
+      {
+        "name": "en-US"
+      }
+    ],
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "Sales",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "OrderID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "e66f2100-a1a2-4c13-bf35-e1206f7b7f06",
+            "sourceColumn": "OrderID",
+            "summarizeBy": "count"
+          },
+          {
+            "name": "Product",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "aa1ae60e-3087-48ef-98ce-ddf0c2f0d043",
+            "sourceColumn": "Product",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "SalesAmount",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "8e3a468c-9796-4f8c-9298-ce7dd45d7edf",
+            "sourceColumn": "SalesAmount",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "ecec0291-1977-492f-8d42-84ca74822ee4",
+        "measures": [
+          {
+            "name": "TotalSalesAmount",
+            "expression": "SUMX(Sales, Sales[SalesAmount])",
+            "formatString": "0",
+            "lineageTag": "ecd53f39-5d55-478f-865e-d45ca76090e9"
+          },
+          {
+            "name": "AverageSalesPerProduct",
+            "expression": "AVERAGEX(Sales, Sales[Product])",
+            "lineageTag": "8cd511a5-b109-4fca-b10a-378887da3720"
+          },
+          {
+            "name": "TotalSaleAmount",
+            "expression": "SUM(Sales[SalesAmount])",
+            "lineageTag": "0519c317-88ff-4861-affb-c720547f3b1a"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Sales",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText(\"i45WMlTSUfJJLCjJLwAyTA2AQClWJ1rJCMgLyMjPSwXSxnBRYyAvJDEpJ7UEyDCCCMcCAA==\", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [OrderID = _t, Product = _t, SalesAmount = _t]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"OrderID\", Int64.Type}, {\"Product\", type text}, {\"SalesAmount\", Int64.Type}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
